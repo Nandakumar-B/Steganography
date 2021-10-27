@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Image Steganography</title>
+    <meta charset="utf-8">
+	<meta name="theme-color" content="#f0f0f0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+	<link href="images/image_search.png" rel="icon">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display;=swap" rel="stylesheet">
+  </head>
+  <body>
+	<div class="loader" id="pan_load" style="display:none;">
+	  <div class="load">
+	  </div>
+	</div>
+	<div class="pan-main" id="pan_main">
+	  <form>
+		<select class="txt">
+		  <option value="encode">ENCODE</option>
+		  <option value="decode">DECODE</option>
+		</select>
+		<div class="pan-image">
+		  <h id="head_normal">Normal Image</h>
+		  <h id="head_coded">Encoded Image</h>
+		  <img id="image_normal" src="images/image_search.png" alt="preview">
+		  <img id="image_coded" src="images/image_search.png" alt="preview">
+		</div>
+		<textarea id="txt_message" class="txt" cols="4" rows="5" placeholder="Enter your message" required></textarea>
+		<input id="file_image" class="txt" type="file" accept="image/*" required>
+		<button style="display:none;" type="button" class="btn-solid" id="btn_down"><i class="fa fa-download"></i>&nbsp; DOWNLOAD</button>
+		<button class="btn-solid" id="btn_sub" type="submit">ENCODE</button>
+	  </form>
+	</div>
+	<script src="js/steganography.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>		
